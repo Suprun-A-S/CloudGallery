@@ -1,1 +1,1 @@
-# AIGallery
+# CloudGallery

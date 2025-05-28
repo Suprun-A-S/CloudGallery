@@ -1,0 +1,41 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",                     // до якого стандарту транслюємо
+    "module": "NodeNext",                   // використовуємо сучасні ESM-модулі
+    "moduleResolution": "NodeNext",         // відповідає module
+    "esModuleInterop": true,                // щоб імпорт `import pkg from 'pkg'` працював
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                         // увімкнути всі суворі перевірки
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",                       // куди компілювати
+    "rootDir": "src",                       // звідки брати вихідні файли
+    "baseUrl": ".",                         // базова папка для абсолютних імпортів
+    "paths": {                              // шляхи для alias-імпортів
+      "@config/*": ["src/config/*"],
+      "@routes/*": ["src/routes/*"],
+      "@models/*": ["src/models/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": [                          // де шукати *.d.ts
+      "src/types",
+      "node_modules/@types"
+    ],
+    "types": [                              // підключені глобальні типи
+      "node",
+      "express"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

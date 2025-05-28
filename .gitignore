@@ -1,0 +1,30 @@
+# ── Общие правила ──────────────────────────────────────────────────
+# IDE и ОС
+.vscode/
+.idea/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Локальные env-файлы
+.env
+*.local
+
+# ── Правила для бекенда (backend/) ──────────────────────────────
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/logs/
+backend/.env
+
+# ── Правила для фронтенда (frontend/) ──────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+frontend/.env
+
+# ── Правила для корня (если вы что-то собираете в корне) ───────
+node_modules/
+dist/
+build/

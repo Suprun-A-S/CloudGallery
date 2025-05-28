@@ -1,0 +1,14 @@
+{
+  "name": "cloudgallery-monorepo",
+  "private": true,
+  "scripts": {
+    "dev":   "concurrently --kill-others-on-fail \"npm:start:backend\" \"npm:start:frontend\"",
+    "start:backend":   "cross-env NODE_ENV=development npm --prefix backend run dev",
+    "start:frontend":  "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build && npm --prefix backend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3"
+  }
+}
